@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/StyleTest.css" rel="stylesheet" type="text/css">
+    <link href="~/css/style.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Fredoka+One'>
+
+    <link rel="stylesheet" href="css/stylemain.css">
+    <link rel="stylesheet" href="~/css/ball.css">
+
+</head>
+<body>
+
+    <nav class="CoolHeader sticky-top py-1">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
+            </a>
+            <a class="py-2 d-none d-md-inline-block" asp-controller="Home" asp-action="Main">Главная</a>
+            <a class="py-2 d-none d-md-inline-block" href="/ShopCard/Index">Корзина</a>
+            <a class="py-2 d-none d-md-inline-block" href="/Cars/GetListGoods">Все категории</a>
+            <a class="py-2 d-none d-md-inline-block" href="/Cars/GetListGoods/electro">Платные</a>
+            <a class="py-2 d-none d-md-inline-block" href="/Cars/GetListGoods/fuel">Бесплатные</a>
+            <a class="btn btn-danger" asp-controller="Admin" asp-action="LogIn" style="background-color: #d43f3a;">Админ</a>
+
+        </div>
+    </nav>
+
+
+
+
+
+    <div>
+        @RenderBody()
+    </div>
+
+
+    <link href="~/css/reset.css" rel="stylesheet">
+    <!-- Footer -->
+    <footer class="pt-5 pb-4" id="contact">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                    <h5 class="mb-4 font-weight-bold">ABOUT US</h5>
+                    <p class="mb-4">Etiam laoreet in ex quis efficitur.</p>
+                    <ul class="f-address">
+                        <li>
+                            <div class="row">
+                                <div class="col-1"><i class="fas fa-map-marker"></i></div>
+                                <div class="col-10">
+                                    <h6 class="font-weight-bold mb-0">Address:</h6>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-1"><i class="far fa-envelope"></i></div>
+                                <div class="col-10">
+                                    <h6 class="font-weight-bold mb-0">Have any questions?</h6>
+                                    <p><a href="#">Support@userthemes.com</a></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-1"><i class="fas fa-phone-volume"></i></div>
+                                <div class="col-10">
+                                    <h6 class="font-weight-bold mb-0">Address:</h6>
+                                    <p><a href="#">+XX (0) XX XX-XXXX-XXXX</a></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                    <h5 class="mb-4 font-weight-bold">FRESH TWEETS</h5>
+                    <ul class="f-address">
+                        <li>
+                            <div class="row">
+                                <div class="col-1"><i class="fab fa-twitter"></i></div>
+                                <div class="col-10">
+                                    <p class="mb-0"><a href="#"> </a> HTML Version Out Now</p>
+                                    <label>10 Mins Ago</label>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-1"><i class="fab fa-twitter"></i></div>
+                                <div class="col-10">
+                                    <p class="mb-0"><a href="#"> hello</a> HTML Version Out Now</p>
+                                    <label>10 Mins Ago</label>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-1"><i class="fab fa-twitter"></i></div>
+                                <div class="col-10">
+                                    <p class="mb-0"><a href="#"> hello</a> HTML Version Out Now</p>
+                                    <label>10 Mins Ago</label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                    <h5 class="mb-4 font-weight-bold">LATEST UPDATES</h5>
+                    <ul class="recent-post">
+                        <li>
+                            <label class="mr-3">28 <br><span>APR</span></label>
+                            <span>Rendomised words which dont look eveable.</span>
+                        </li>
+                        <li>
+                            <label class="mr-3">29 <br><span>APR</span></label>
+                            <span>Rendomised words which dont look eveable.</span>
+                        </li>
+                        <li>
+                            <label class="mr-3">30 <br><span>APR</span></label>
+                            <span>Rendomised words which dont look eveable.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Copyright -->
+    <section class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="text-center text-white">
+                        &copy; 2018 Your Company. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="~/js/ball.js"></script>
+    <script src="~js/bootstrap.min.js"></script>
+</body>
+</html>

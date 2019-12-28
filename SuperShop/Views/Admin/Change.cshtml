@@ -1,0 +1,18 @@
+﻿
+
+
+    <div class="container mt-5">
+
+        @foreach (Car cars in Model.GetAllCars)
+        {
+
+
+            @using (Html.BeginForm("CompleteChange", "Admin", FormMethod.Post))
+            {
+
+                @Html.Partial("AllCars_Change", cars)
+
+            }
+        }
+
+</div>

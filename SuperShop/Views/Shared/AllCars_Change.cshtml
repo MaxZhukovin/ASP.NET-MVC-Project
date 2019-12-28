@@ -1,0 +1,56 @@
+﻿@model Car
+    
+    <div class="card  shadow-sm" style="width:300px; float:left; margin-right:30px; margin-bottom:30px;">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">@Model.name</h4>
+        </div>
+        <div class="card-body">
+            <div class="card" style="width: 30%; border:0;">
+
+                @Html.HiddenFor(m => m.id)
+                <p>
+                    @Html.LabelFor(m => m.name, "name")
+                    <br />
+                    @Html.EditorFor(m => m.name)
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.priece, "priece")
+                    <br />
+                    @Html.EditorFor(m => m.priece)
+
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.ShortDescription, "ShortDescription")
+                    <br />
+                    @Html.EditorFor(m => m.ShortDescription)
+                </p>
+
+                <p>
+                    @Html.LabelFor(m => m.IsFavorite, "IsFavorite")
+                    <br />
+                    @Html.EditorFor(m => m.IsFavorite)
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.img, "img")
+                    <br />
+                    @Html.EditorFor(m => m.img)
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.available, "available")
+                    <br />
+                    @Html.EditorFor(m => m.available)
+                </p>
+                <p>
+                    @Html.LabelFor(m => m.CategoryId, "CategoryId")
+                    <br />
+                    @Html.EditorFor(m => m.CategoryId)
+                </p>
+               
+
+            </div>
+            <button  class="btn btn-lg btn-block btn-outline-primary" type="submit" >Save</button>
+        </div>
+    </div>
+
+
+  

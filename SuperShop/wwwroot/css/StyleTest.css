@@ -1,0 +1,11 @@
+﻿body {
+ background: #808080;
+}
+.CoolHeader {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+.Col-lg-4 {
+    margin-top: 20px;
+}

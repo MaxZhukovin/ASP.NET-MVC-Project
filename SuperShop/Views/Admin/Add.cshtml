@@ -1,0 +1,81 @@
+﻿
+@model Car
+
+    <div class="container mt-5">
+        <h3>Add car</h3>
+        <br />
+
+        <div class="row">
+
+
+            <form asp-action="Add" method="post" class="form-horizontal">
+
+                <div class="form-group">
+                    <label asp-for="name"></label>
+                    <div class="col-md-5">
+                        <input asp-for="name" class="form-control" size="70" />
+                        <span asp-validation-for="name" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ShortDescription"></label>
+                    <div class="col-md-5">
+                        <input asp-for="ShortDescription" class="form-control" />
+                        <span asp-validation-for="ShortDescription" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="LongDescription"></label>
+                    <div class="col-md-5">
+                        <input asp-for="LongDescription" class="form-control" />
+                        <span asp-validation-for="LongDescription" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="img"></label>
+                    <div class="col-md-5">
+                        <input asp-for="img" class="form-control" />
+                        <span asp-validation-for="img" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="priece"></label>
+                    <div class="col-md-5">
+                        <input asp-for="priece" class="form-control" />
+                        <span asp-validation-for="priece" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="IsFavorite"></label>
+                    <div class="col-md-5">
+                        <input asp-for="IsFavorite" class="form-control" />
+                        <span asp-validation-for="IsFavorite" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="available"></label>
+                    <div class="col-md-5">
+                        <input asp-for="available" class="form-control" />
+                        <span asp-validation-for="available" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CategoryId"></label>
+                    <div class="col-md-5">
+                        <input asp-for="CategoryId" class="form-control" />
+                        <span asp-validation-for="CategoryId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <input class="btn btn-success" type="submit" value="ADD" />
+
+            </form>
+        </div>
+    </div>

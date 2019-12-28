@@ -1,0 +1,92 @@
+﻿@using System;
+@using System.Globalization;
+@model IEnumerable<OrderListViewModel>
+
+    <div class="container mt-5"><p>
+    Имя: &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp
+
+    Цена:  &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp
+
+    Название:   &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp
+
+    Phone:   &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp
+
+    Course ID:    &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp
+        
+    Order No
+</p></div>
+    
+    <div class="container mt-5" style="min-height:400px;">
+        @{
+
+            foreach (var orders in Model)
+            {
+                string color;
+
+                if (orders.GetAllOrders.confirm == false) { color = "background-color:brown;"; } else { color = "background-color:chartreuse"; }
+
+                string button;
+
+                string ButtonName;
+
+                if (orders.GetAllOrders.confirm == false)
+                {
+
+                    button = "ConfirmOrder";
+
+                    ButtonName = "Confirm";
+                }
+                else
+                {
+
+                    button = "CancelOrder";
+
+                    ButtonName = "Cancel";
+                }
+
+
+
+                <nav class="navbar  navbar-dark" style="width:1350px; margin-left:-100px; @color">
+
+
+                    <div class="collapse navbar-collapse" id="navbarsExample07">
+
+                        <form method="post">
+
+
+                            <input type="text" name="items[0]" value=" @orders.GetAllOrders.name" />
+
+
+                            <input type="text" name="items[1]" value="@orders.GetAllDetail.price" />
+
+
+                            <input type="text" name="items[2]" value="@orders.GetAllCars.name" readonly />
+
+
+                            <input type="text" name="items[3]" value="@orders.GetAllOrders.phone" />
+
+
+                            <input type="text" name="OrderId" value="@orders.GetAllOrders.id" readonly />
+
+
+                            <input type="text" name="CarId" value="@orders.GetAllCars.id" />
+
+
+                            <input type="submit" value="@ButtonName" asp-controller="Admin" asp-action="@button" />
+
+                            <input type="submit" value="Delete" asp-controller="Admin" asp-action="DeleteOrder" />
+
+                            <input type="submit" value="Send" asp-controller="Admin" asp-action="SendMessage" />
+
+                        </form>
+
+
+                    </div>
+
+                </nav>
+
+            }
+        }
+
+
+    </div>

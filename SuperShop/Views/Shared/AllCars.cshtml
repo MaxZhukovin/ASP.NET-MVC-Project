@@ -1,0 +1,29 @@
+﻿@model Car
+
+@using System;
+@using System.Globalization;
+
+ 
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="@Model.img" class="card-img-top" alt="@Model.name" style=" width: 350px; height: 200px;overflow: hidden;">
+                <div class="card-body">
+
+                    <h5> Название: @Model.name</h5>
+                    <p class="card-text">@Model.ShortDescription</p>
+
+
+
+                    <p>Цена: @Model.priece.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("en-us"))</p>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a class="btn btn-outline-primary" asp-controller="CarsDetail" asp-action="MoreDetail" asp-route-id="@Model.id">Подробнее</a>
+                            <a class="btn btn-outline-primary" asp-controller="ShopCard" asp-action="addToCart" asp-route-id="@Model.id">Добавить в корзину</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+   
